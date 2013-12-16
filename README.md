@@ -22,15 +22,12 @@ Scrapers register themselves via a decorator:
     def wikipedia_astro_object(url):
         opener = build_opener()
         infobox, body = _parse_page(simplejson.loads(opener.open(url).read()))
-
-        astro = {
+        return {
             'name': _get_infobox_value(infobox, 'name'),
             'type': _get_infobox_value(infobox, 'type'),
             'constellation': _get_infobox_value(infobox, 'constellation'),
             'radius_ly': _get_infobox_value(infobox, 'radius_ly'),
         }
-
-        return astro
 
 And clients can request a scrape as follows:
 
