@@ -3,6 +3,19 @@ decentscraper
 
 A decent scraper of useful things.
 
+About
+-----
+
+This is a blue collar scraper of HTML websites and JSON/XML APIs. It uses any and all manner of dirty text munging
+and beautiful soup-ing to get to the good stuff.
+
+It uses a simple system of providers and "x-" mimetypes to organize what types of things are available from where.
+
+All values are returned as dictionaries of simple Python types, perfect for JSON-ification.
+
+Example usage
+-------------
+
 Scrapers register themselves via a decorator:
 
     @scraper('wikipedia', 'x-astro-object-json')
