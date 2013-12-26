@@ -1,9 +1,8 @@
 from setuptools import setup
-from decentscraper import __version__
 
 setup(
     name='decentscraper',
-    version=__version__,
+    version='0.1.0',
     author='John Martin, Sam Wainwright, John Wainwright',
     author_email='john@lonepixel.com',
     packages=['decentscraper'],
